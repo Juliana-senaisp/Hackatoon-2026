@@ -1,201 +1,256 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hackathon 2026</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Public+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hackathon 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Public+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<header class="nav">
-  <div class="nav-inner">
-    <div class="brand"><span class="dot"></span>Hackathon 2026</div>
-    <nav class="links">
-      <a href="#temas">Temas</a>
-      <a href="#cronograma">Cronograma</a>
-      <a href="#inscricao">Inscreva-se</a>
-    </nav>
-    <a href="#inscricao" class="btn btn-primary">Inscreva-se</a>
-  </div>
-</header>
-
-<section class="hero">
-  <div class="wrap hero-grid">
-    <div>
-      <div class="hero-date mono">18 de setembro de 2026</div>
-      <h1>Um dia inteiro para transformar uma ideia em projeto.</h1>
-      <p class="lede">Formem squads, escolham um tema, e construam uma solução do zero até a apresentação para o júri — tudo em um único dia.</p>
-      <div class="hero-actions">
-        <a href="#inscricao" class="btn btn-primary">Garantir minha vaga</a>
-        <a href="#temas" class="btn btn-ghost">Ver os temas</a>
-      </div>
+  <header class="nav">
+    <div class="nav-inner">
+      <div class="brand"><span class="dot"></span>Hackathon 2026</div>
+      <nav class="links">
+        <a href="#temas">Temas</a>
+        <a href="#cronograma">Cronograma</a>
+        <a href="#inscricao">Inscreva-se</a>
+      </nav>
+      <a href="#inscricao" class="btn btn-primary">Inscreva-se</a>
     </div>
-    <div>
-      <div class="countdown mono">
-        <div class="flip"><div class="num" id="cd-days">00</div><div class="label">dias</div></div>
-        <div class="flip"><div class="num" id="cd-hours">00</div><div class="label">horas</div></div>
-        <div class="flip"><div class="num" id="cd-min">00</div><div class="label">minutos</div></div>
-        <div class="flip"><div class="num" id="cd-sec">00</div><div class="label">segundos</div></div>
-      </div>
-      <div class="countdown-note" id="cd-note">Faltam para o início do hackathon</div>
-    </div>
-  </div>
-</section>
+  </header>
 
-<section id="temas">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="kicker">Temas</div>
-      <h2>Escolha a frente que você quer construir</h2>
-      <p>Cada squad escolhe um tema no início do dia. Os temas ficam visíveis apenas com o código de acesso, entregue aos alunos inscritos.</p>
-    </div>
-
-    <div class="theme-gate" id="theme-gate">
-      <svg class="gate-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
-      <h3>Área restrita</h3>
-      <p>Informe seu nome e o código de acesso entregue na inscrição para ver os temas do hackathon.</p>
-      <form id="gate-form">
-        <div class="gate-field">
-          <label for="gate-name">Nome</label>
-          <input type="text" id="gate-name" placeholder="Seu nome" required>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="hero-date mono">18 de setembro de 2026</div>
+        <h1>Um dia inteiro para transformar uma ideia em projeto.</h1>
+        <p class="lede">Formem squads, escolham um tema, e construam uma solução do zero até a apresentação para o júri
+          — tudo em um único dia.</p>
+        <div class="hero-actions">
+          <a href="#inscricao" class="btn btn-primary">Garantir minha vaga</a>
+          <a href="#temas" class="btn btn-ghost">Ver os temas</a>
         </div>
-        <div class="gate-field">
-          <label for="gate-code">Código de acesso</label>
-          <input type="text" id="gate-code" placeholder="Ex: HACK2026" required autocomplete="off">
+      </div>
+      <div>
+        <div class="countdown mono">
+          <div class="flip">
+            <div class="num" id="cd-days">00</div>
+            <div class="label">dias</div>
+          </div>
+          <div class="flip">
+            <div class="num" id="cd-hours">00</div>
+            <div class="label">horas</div>
+          </div>
+          <div class="flip">
+            <div class="num" id="cd-min">00</div>
+            <div class="label">minutos</div>
+          </div>
+          <div class="flip">
+            <div class="num" id="cd-sec">00</div>
+            <div class="label">segundos</div>
+          </div>
         </div>
-        <div class="gate-error" id="gate-error">Código inválido. Confira com a organização e tente novamente.</div>
-        <button type="submit" class="btn btn-primary gate-submit">Desbloquear temas</button>
-      </form>
-    </div>
-
-    <div id="theme-unlocked">
-    <div class="theme-grid" id="theme-grid">
-      <button class="theme-card" data-theme="Educação">
-        <svg class="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8l10-4 10 4-10 4-10-4z"/><path d="M6 10.5V16c0 1.4 2.7 3 6 3s6-1.6 6-3v-5.5"/><path d="M22 8v6"/></svg>
-        <h3>Educação</h3>
-        <p>Ferramentas que tornam o aprendizado mais acessível ou engajador.</p>
-        <div class="theme-pick"><span class="check"></span><span class="check-label">Selecionar tema</span></div>
-      </button>
-
-      <button class="theme-card" data-theme="Saúde e bem-estar">
-        <svg class="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 8.6a4.6 4.6 0 0 0-8-3.1L12 6.3l-0.8-0.8a4.6 4.6 0 0 0-6.5 6.5L12 19.5l7.3-7.5a4.6 4.6 0 0 0 1.5-3.4z"/><path d="M6 12h2.5l1.5-3 2 5 1.5-2.5H16"/></svg>
-        <h3>Saúde e bem-estar</h3>
-        <p>Soluções que ajudam pessoas a cuidar melhor da saúde física ou mental.</p>
-        <div class="theme-pick"><span class="check"></span><span class="check-label">Selecionar tema</span></div>
-      </button>
-
-      <button class="theme-card" data-theme="Sustentabilidade">
-        <svg class="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20c8 0 14-6 14-14 0 0-11-2-14 8-1.5 4.5 0 6 0 6z"/><path d="M4 20c2-4 5-7 9-9"/></svg>
-        <h3>Sustentabilidade</h3>
-        <p>Projetos com impacto ambiental positivo, do consumo consciente à reciclagem.</p>
-        <div class="theme-pick"><span class="check"></span><span class="check-label">Selecionar tema</span></div>
-      </button>
-
-      <button class="theme-card" data-theme="Mobilidade urbana">
-        <svg class="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.4"/></svg>
-        <h3>Mobilidade urbana</h3>
-        <p>Ideias para melhorar deslocamento, transporte público ou trânsito.</p>
-        <div class="theme-pick"><span class="check"></span><span class="check-label">Selecionar tema</span></div>
-      </button>
-
-      <button class="theme-card" data-theme="Inclusão social">
-        <svg class="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="3"/><circle cx="17" cy="9" r="2.4"/><path d="M2.5 20c0-3.3 2.5-6 5.5-6s5.5 2.7 5.5 6"/><path d="M14.5 14.5c2.4 0.2 4.2 2.4 4.2 5.5"/></svg>
-        <h3>Inclusão social</h3>
-        <p>Tecnologia que reduz barreiras de acesso para grupos sub-representados.</p>
-        <div class="theme-pick"><span class="check"></span><span class="check-label">Selecionar tema</span></div>
-      </button>
-
-      <button class="theme-card" data-theme="Games e entretenimento">
-        <svg class="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="8" width="20" height="9" rx="4"/><path d="M7 11v4M5 13h4"/><circle cx="16" cy="12" r="1"/><circle cx="18.5" cy="14" r="1"/></svg>
-        <h3>Games e entretenimento!</h3>
-        <p>Experiências interativas, jogos educativos ou aplicações criativas.</p>
-        <div class="theme-pick"><span class="check"></span><span class="check-label">Selecionar tema</span></div>
-      </button>
-    </div>
-
-    <div class="theme-summary" id="theme-summary">Nenhum tema selecionado ainda — clique em um card acima para escolher o seu.</div>
-    </div>
-  </div>
-</section>
-
-<section id="cronograma">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="kicker">Cronograma</div>
-      <h2>Como vai ser o dia 18/09</h2>
-      <p>Um roteiro sugerido do dia inteiro. Ajuste os horários e atividades conforme a realidade da sua turma e do espaço usado.</p>
-    </div>
-
-    <div class="timeline mono">
-      <div class="t-item">
-        <div class="t-time">08:00</div>
-        <div class="t-title">Credenciamento</div>
-        <div class="t-desc">Chegada, check-in dos participantes e formação final dos squads.</div>
-      </div>
-      <div class="t-item">
-        <div class="t-time">08:30</div>
-        <div class="t-title">Abertura</div>
-        <div class="t-desc">Boas-vindas, apresentação das regras e liberação oficial dos temas.</div>
-      </div>
-      <div class="t-item">
-        <div class="t-time">09:00</div>
-        <div class="t-title">Início do desenvolvimento</div>
-        <div class="t-desc">Cada squad começa a construir sua solução com apoio de mentores.</div>
-      </div>
-      <div class="t-item">
-        <div class="t-time">12:00</div>
-        <div class="t-title">Almoço</div>
-        <div class="t-desc">Pausa para almoço e descanso.</div>
-      </div>
-      <div class="t-item">
-        <div class="t-time">13:00</div>
-        <div class="t-title">Retomada + mentorias</div>
-        <div class="t-desc">Continuação do desenvolvimento, com rodadas de mentoria por squad.</div>
-      </div>
-      <div class="t-item">
-        <div class="t-time">16:30</div>
-        <div class="t-title">Encerramento do desenvolvimento</div>
-        <div class="t-desc">Squads finalizam o projeto e preparam a apresentação.</div>
-      </div>
-      <div class="t-item">
-        <div class="t-time">17:00</div>
-        <div class="t-title">Pitches</div>
-        <div class="t-desc">Cada squad apresenta seu projeto ao júri.</div>
-      </div>
-      <div class="t-item">
-        <div class="t-time">18:00</div>
-        <div class="t-title">Avaliação do júri</div>
-        <div class="t-desc">Deliberação com base nos critérios definidos previamente.</div>
-      </div>
-      <div class="t-item">
-        <div class="t-time">18:30</div>
-        <div class="t-title">Premiação e encerramento</div>
-        <div class="t-desc">Anúncio dos vencedores e fechamento do evento.</div>
+        <div class="countdown-note" id="cd-note">Faltam para o início do hackathon</div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="cta" id="inscricao">
-  <div class="wrap">
-    <h2>Pronto para participar?</h2>
-    <p>Garanta sua vaga, escolha seu squad e prepare-se para um dia de construção intensa.</p>
-    <a href="#" class="btn btn-primary">Fazer inscrição</a>
-  </div>
-</section>
+  <section id="temas">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">Temas</div>
+        <h2>Escolha a frente que você quer construir</h2>
+        <p>Cada squad escolhe um tema no início do dia. Os temas ficam visíveis apenas com o código de acesso, entregue
+          aos alunos inscritos.</p>
+      </div>
 
-<footer>
-  Hackathon 2026 · 18 de setembro
-</footer>
+      <div class="theme-gate" id="theme-gate">
+        <svg class="gate-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+          stroke-linecap="round" stroke-linejoin="round">
+          <rect x="4" y="10" width="16" height="10" rx="2" />
+          <path d="M8 10V7a4 4 0 0 1 8 0v3" />
+        </svg>
+        <h3>Área restrita</h3>
+        <p>Informe seu nome e o código de acesso entregue na inscrição para ver os temas do hackathon.</p>
+        <form id="gate-form">
+          <div class="gate-field">
+            <label for="gate-name">Nome</label>
+            <input type="text" id="gate-name" placeholder="Seu nome" required>
+          </div>
+          <div class="gate-field">
+            <label for="gate-code">Código de acesso</label>
+            <input type="text" id="gate-code" placeholder="Ex: HACK2026" required autocomplete="off">
+          </div>
+          <div class="gate-error" id="gate-error">Código inválido. Confira com a organização e tente novamente.</div>
+          <button type="submit" class="btn btn-primary gate-submit">Desbloquear temas</button>
+        </form>
+      </div>
 
-<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
-<script src="firebase-config.js"></script>
-<script src="script.js"></script>
+      <div id="theme-unlocked">
+        <div class="theme-grid" id="theme-grid">
+          <button class="theme-card" data-theme="Educação">
+            <svg class="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2 8l10-4 10 4-10 4-10-4z" />
+              <path d="M6 10.5V16c0 1.4 2.7 3 6 3s6-1.6 6-3v-5.5" />
+              <path d="M22 8v6" />
+            </svg>
+            <h3>Educação</h3>
+            <p>Ferramentas que tornam o aprendizado mais acessível ou engajador.</p>
+            <div class="theme-pick"><span class="check"></span><span class="check-label">Selecionar tema</span></div>
+          </button>
+
+          <button class="theme-card" data-theme="Saúde e bem-estar">
+            <svg class="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M20.8 8.6a4.6 4.6 0 0 0-8-3.1L12 6.3l-0.8-0.8a4.6 4.6 0 0 0-6.5 6.5L12 19.5l7.3-7.5a4.6 4.6 0 0 0 1.5-3.4z" />
+              <path d="M6 12h2.5l1.5-3 2 5 1.5-2.5H16" />
+            </svg>
+            <h3>Saúde e bem-estar</h3>
+            <p>Soluções que ajudam pessoas a cuidar melhor da saúde física ou mental.</p>
+            <div class="theme-pick"><span class="check"></span><span class="check-label">Selecionar tema</span></div>
+          </button>
+
+          <button class="theme-card" data-theme="Sustentabilidade">
+            <svg class="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 20c8 0 14-6 14-14 0 0-11-2-14 8-1.5 4.5 0 6 0 6z" />
+              <path d="M4 20c2-4 5-7 9-9" />
+            </svg>
+            <h3>Sustentabilidade</h3>
+            <p>Projetos com impacto ambiental positivo, do consumo consciente à reciclagem.</p>
+            <div class="theme-pick"><span class="check"></span><span class="check-label">Selecionar tema</span></div>
+          </button>
+
+          <button class="theme-card" data-theme="Mobilidade urbana">
+            <svg class="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z" />
+              <circle cx="12" cy="9.5" r="2.4" />
+            </svg>
+            <h3>Mobilidade urbana</h3>
+            <p>Ideias para melhorar deslocamento, transporte público ou trânsito.</p>
+            <div class="theme-pick"><span class="check"></span><span class="check-label">Selecionar tema</span></div>
+          </button>
+
+          <button class="theme-card" data-theme="Inclusão social">
+            <svg class="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="8" cy="8" r="3" />
+              <circle cx="17" cy="9" r="2.4" />
+              <path d="M2.5 20c0-3.3 2.5-6 5.5-6s5.5 2.7 5.5 6" />
+              <path d="M14.5 14.5c2.4 0.2 4.2 2.4 4.2 5.5" />
+            </svg>
+            <h3>Inclusão social</h3>
+            <p>Tecnologia que reduz barreiras de acesso para grupos sub-representados.</p>
+            <div class="theme-pick"><span class="check"></span><span class="check-label">Selecionar tema</span></div>
+          </button>
+
+          <button class="theme-card" data-theme="Games e entretenimento">
+            <svg class="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="8" width="20" height="9" rx="4" />
+              <path d="M7 11v4M5 13h4" />
+              <circle cx="16" cy="12" r="1" />
+              <circle cx="18.5" cy="14" r="1" />
+            </svg>
+            <h3>Games e entretenimento!</h3>
+            <p>Experiências interativas, jogos educativos ou aplicações criativas.</p>
+            <div class="theme-pick"><span class="check"></span><span class="check-label">Selecionar tema</span></div>
+          </button>
+        </div>
+
+        <div class="theme-summary" id="theme-summary">Nenhum tema selecionado ainda — clique em um card acima para
+          escolher o seu.</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="cronograma">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">Cronograma</div>
+        <h2>Como vai ser o dia 18/09</h2>
+        <p>Um roteiro sugerido do dia inteiro. Ajuste os horários e atividades conforme a realidade da sua turma e do
+          espaço usado.</p>
+      </div>
+
+      <div class="timeline mono">
+        <div class="t-item">
+          <div class="t-time">08:00</div>
+          <div class="t-title">Credenciamento</div>
+          <div class="t-desc">Chegada, check-in dos participantes e formação final dos squads.</div>
+        </div>
+        <div class="t-item">
+          <div class="t-time">08:30</div>
+          <div class="t-title">Abertura</div>
+          <div class="t-desc">Boas-vindas, apresentação das regras e liberação oficial dos temas.</div>
+        </div>
+        <div class="t-item">
+          <div class="t-time">09:00</div>
+          <div class="t-title">Início do desenvolvimento</div>
+          <div class="t-desc">Cada squad começa a construir sua solução com apoio de mentores.</div>
+        </div>
+        <div class="t-item">
+          <div class="t-time">12:00</div>
+          <div class="t-title">Almoço</div>
+          <div class="t-desc">Pausa para almoço e descanso.</div>
+        </div>
+        <div class="t-item">
+          <div class="t-time">13:00</div>
+          <div class="t-title">Retomada + mentorias</div>
+          <div class="t-desc">Continuação do desenvolvimento, com rodadas de mentoria por squad.</div>
+        </div>
+        <div class="t-item">
+          <div class="t-time">16:30</div>
+          <div class="t-title">Encerramento do desenvolvimento</div>
+          <div class="t-desc">Squads finalizam o projeto e preparam a apresentação.</div>
+        </div>
+        <div class="t-item">
+          <div class="t-time">17:00</div>
+          <div class="t-title">Pitches</div>
+          <div class="t-desc">Cada squad apresenta seu projeto ao júri.</div>
+        </div>
+        <div class="t-item">
+          <div class="t-time">18:00</div>
+          <div class="t-title">Avaliação do júri</div>
+          <div class="t-desc">Deliberação com base nos critérios definidos previamente.</div>
+        </div>
+        <div class="t-item">
+          <div class="t-time">18:30</div>
+          <div class="t-title">Premiação e encerramento</div>
+          <div class="t-desc">Anúncio dos vencedores e fechamento do evento.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta" id="inscricao">
+    <div class="wrap">
+      <h2>Pronto para participar?</h2>
+      <p>Garanta sua vaga, escolha seu squad e prepare-se para um dia de construção intensa.</p>
+      <a href="#" class="btn btn-primary">Fazer inscrição</a>
+    </div>
+  </section>
+
+  <footer>
+    Hackathon 2026 · 18 de setembro
+  </footer>
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="firebase-config.js"></script>
+  <script src="script.js"></script>
 
 </body>
+
 </html>
