@@ -28,6 +28,9 @@ function atualizarContagem(){
 atualizarContagem();
 setInterval(atualizarContagem, 1000);
 
+// Tema único deste hackathon — usado para registrar no cadastro do aluno.
+const TEMA_UNICO = 'Planejador de Treino e Dieta';
+
 // Código de acesso: validado contra o documento config/acesso no Firestore.
 // O campo "codigo" desse documento é o que os alunos vão digitar.
 const gateForm = document.getElementById('gate-form');
@@ -35,8 +38,6 @@ const gateError = document.getElementById('gate-error');
 const gateBox = document.getElementById('theme-gate');
 const unlocked = document.getElementById('theme-unlocked');
 const gateSubmitBtn = gateForm.querySelector('.gate-submit');
-
-let participanteId = null; // guarda o registro do aluno para salvar o tema depois
 
 gateForm.addEventListener('submit', async (e) => {
   e.preventDefault();
@@ -52,13 +53,12 @@ gateForm.addEventListener('submit', async (e) => {
     const codigoValido = configDoc.exists ? configDoc.data().codigo : null;
 
     if (codigoValido && codigoDigitado.toUpperCase() === codigoValido.toUpperCase()){
-      const novoRegistro = await db.collection('inscricoes').add({
+      await db.collection('inscricoes').add({
         nome: nome,
         codigoUsado: codigoDigitado,
-        tema: null,
+        tema: TEMA_UNICO,
         criadoEm: firebase.firestore.FieldValue.serverTimestamp()
       });
-      participanteId = novoRegistro.id;
 
       gateBox.style.display = 'none';
       unlocked.classList.add('show');
@@ -72,36 +72,6 @@ gateForm.addEventListener('submit', async (e) => {
     gateError.classList.add('show');
   } finally {
     gateSubmitBtn.disabled = false;
-    gateSubmitBtn.textContent = 'Desbloquear temas';
+    gateSubmitBtn.textContent = 'Revelar tema';
   }
-});
-
-// Seleção de tema — salva a escolha no registro do aluno no Firestore
-const cards = document.querySelectorAll('.theme-card');
-const resumo = document.getElementById('theme-summary');
-
-function selecionarTema(card){
-  cards.forEach(c => c.classList.remove('selected'));
-  card.classList.add('selected');
-  resumo.innerHTML = 'Tema selecionado: <strong>' + card.dataset.theme + '</strong>';
-
-  if (participanteId){
-    db.collection('inscricoes').doc(participanteId).update({
-      tema: card.dataset.theme,
-      atualizadoEm: firebase.firestore.FieldValue.serverTimestamp()
-    }).catch(err => console.error('Não foi possível salvar o tema escolhido:', err));
-  }
-}
-
-cards.forEach(card => {
-  card.addEventListener('click', () => selecionarTema(card));
-
-  // Acessibilidade: como o card virou um <div>, precisa responder também
-  // ao teclado (Enter / Espaço), já que não é mais um <button> nativo.
-  card.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter' || e.key === ' '){
-      e.preventDefault();
-      selecionarTema(card);
-    }
-  });
 });

@@ -19,7 +19,7 @@
     <div class="nav-inner">
       <div class="brand"><span class="dot"></span>Hackathon 2026</div>
       <nav class="links">
-        <a href="#temas">Temas</a>
+        <a href="#temas">Tema</a>
         <a href="#cronograma">Cronograma</a>
         <a href="#inscricao">Inscreva-se</a>
       </nav>
@@ -32,10 +32,10 @@
       <div>
         <div class="hero-date mono">18 de setembro de 2026</div>
         <h1>Um dia inteiro para transformar uma ideia em projeto.</h1>
-        <p class="lede">Formem times, escolham um tema, e construam uma solução do zero até a apresentação
-          - tudo em um único dia.</p>
+        <p class="lede">Formem times e construam uma solução para o tema deste ano
+          - do zero até a apresentação, tudo em um único dia.</p>
         <div class="hero-actions">
-          <a href="#temas" class="btn btn-primary">Ver os temas</a>
+          <a href="#temas" class="btn btn-primary">Ver o tema</a>
 
         </div>
       </div>
@@ -66,26 +66,26 @@
   <section class="ai-highlight">
     <div class="wrap">
       <div class="ai-note">
-        <svg class="ai-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
-          stroke-linecap="round" stroke-linejoin="round">
-          <path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1" />
-          <circle cx="12" cy="12" r="3.2" />
-        </svg>
-        <div>
-          <h3>Uso de IA 100% liberado</h3>
-          <p>Podem usar ferramentas de IA à vontade durante o hackathon — para programar, pesquisar, gerar conteúdo ou resolver qualquer parte do desafio. O que vale é a solução final e o que vocês aprendem construindo ela.</p>
+        <div class="ai-icon-wrap">
+          <svg class="ai-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1" />
+            <circle cx="12" cy="12" r="3.2" />
+          </svg>
         </div>
+        <h3>Uso de IA 100% liberado</h3>
+        <p>Podem usar ferramentas de IA à vontade durante o hackathon — para programar, pesquisar, gerar conteúdo ou resolver qualquer parte do desafio. O que vale é a solução final e o que vocês aprendem construindo ela.</p>
       </div>
     </div>
   </section>
 
   <section id="temas">
     <div class="wrap">
-      <div class="section-head">
-        <div class="kicker">Temas</div>
-        <h2>Escolha a frente que você quer construir</h2>
-        <p>Cada time escolhe um tema no início do dia. Os temas ficam visíveis apenas com o código de acesso, entregue
-          aos alunos inscritos.</p>
+      <div class="section-head center">
+        <div class="kicker">Tema</div>
+        <h2>O desafio deste hackathon</h2>
+        <p>Este ano o hackathon tem um único tema para todos os times. Ele fica visível apenas com o código de
+          acesso, entregue aos alunos inscritos.</p>
       </div>
 
       <div class="theme-gate" id="theme-gate">
@@ -95,7 +95,7 @@
           <path d="M8 10V7a4 4 0 0 1 8 0v3" />
         </svg>
         <h3>Área restrita</h3>
-        <p>Informe seu nome e o código de acesso para ver os temas do hackathon.</p>
+        <p>Informe seu nome e o código de acesso para ver o tema do hackathon.</p>
         <form id="gate-form">
           <div class="gate-field">
             <label for="gate-name">Nome</label>
@@ -106,115 +106,27 @@
             <input type="text" id="gate-code" placeholder="Ex: SENAI" required autocomplete="off">
           </div>
           <div class="gate-error" id="gate-error">Código inválido. Confira com a organização e tente novamente.</div>
-          <button type="submit" class="btn btn-primary gate-submit">Desbloquear temas</button>
+          <button type="submit" class="btn btn-primary gate-submit">Revelar tema</button>
         </form>
       </div>
 
       <div id="theme-unlocked">
-        <div class="theme-grid" id="theme-grid">
-          <div class="theme-card" data-theme="Organizador de Estudos" tabindex="0" role="button">
-            <svg class="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
-              stroke-linecap="round" stroke-linejoin="round">
-              <rect x="5" y="4" width="14" height="17" rx="2" />
-              <path d="M9 3.5h6a1 1 0 0 1 1 1V6H8V4.5a1 1 0 0 1 1-1z" />
-              <path d="M8.5 12l1.8 1.8L13.5 10.5" />
-              <path d="M9 16h6" />
-            </svg>
-            <h3>Organizador de Estudos</h3>
-            <p>Ferramenta que ajuda um estudante a decidir o que estudar a cada dia, priorizando o que está mais esquecido ou mais fraco.</p>
-            <a class="theme-download" href="desafios/organizador-de-estudos.pdf" download onclick="event.stopPropagation()">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5" /><path d="M4 19h16" /></svg>
-              Baixar desafio (PDF)
-            </a>
-            <div class="theme-pick"><span class="check"></span><span class="check-label">Selecionar tema</span></div>
-          </div>
-
-          <div class="theme-card" data-theme="Controle Financeiro Pessoal" tabindex="0" role="button">
-            <svg class="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
-              stroke-linecap="round" stroke-linejoin="round">
-              <rect x="3" y="6" width="18" height="12" rx="2" />
-              <path d="M3 10h18" />
-              <circle cx="17" cy="14" r="1.1" fill="currentColor" stroke="none" />
-            </svg>
-            <h3>Controle Financeiro Pessoal</h3>
-            <p> Ferramenta para controlar gastos e conseguir economizar para uma meta (ex: um celular, uma viagem).</p>
-            <a class="theme-download" href="desafios/controle-financeiro-pessoal.pdf" download onclick="event.stopPropagation()">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5" /><path d="M4 19h16" /></svg>
-              Baixar desafio (PDF)
-            </a>
-            <div class="theme-pick"><span class="check"></span><span class="check-label">Selecionar tema</span></div>
-          </div>
-
-          <div class="theme-card" data-theme="Painel de Hábitos e Produtividade" tabindex="0" role="button">
-            <svg class="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
-              stroke-linecap="round" stroke-linejoin="round">
-              <path d="M3 20h18" />
-              <path d="M5 20V14" />
-              <path d="M11 20V6" />
-              <path d="M17 20V11" />
-            </svg>
-            <h3>Painel de Hábitos e Produtividade</h3>
-            <p>Ferramenta de acompanhamento de hábitos diários que mostre não só se o hábito foi feito, mas o quão consistente a pessoa está sendo.</p>
-            <a class="theme-download" href="desafios/painel-habitos-produtividade.pdf" download onclick="event.stopPropagation()">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5" /><path d="M4 19h16" /></svg>
-              Baixar desafio (PDF)
-            </a>
-            <div class="theme-pick"><span class="check"></span><span class="check-label">Selecionar tema</span></div>
-          </div>
-
-          <div class="theme-card" data-theme="Gestão de Biblioteca" tabindex="0" role="button">
-            <svg class="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
-              stroke-linecap="round" stroke-linejoin="round">
-              <path d="M3 20h18" />
-              <rect x="5" y="6" width="3" height="14" />
-              <rect x="10.5" y="9" width="3" height="11" />
-              <rect x="16" y="4" width="3" height="16" />
-            </svg>
-            <h3>Gestão de Biblioteca</h3>
-            <p>Sistema para controlar o acervo de livros de uma sala de aula ou biblioteca escolar pequena, incluindo empréstimos.</p>
-            <a class="theme-download" href="desafios/gestao-biblioteca.pdf" download onclick="event.stopPropagation()">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5" /><path d="M4 19h16" /></svg>
-              Baixar desafio (PDF)
-            </a>
-            <div class="theme-pick"><span class="check"></span><span class="check-label">Selecionar tema</span></div>
-          </div>
-
-          <div class="theme-card" data-theme="Planejador de Treino eDieta" tabindex="0" role="button">
-            <svg class="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
-              stroke-linecap="round" stroke-linejoin="round">
-              <path d="M7 12h10" />
-              <rect x="3" y="9" width="3" height="6" rx="1" />
-              <rect x="18" y="9" width="3" height="6" rx="1" />
-              <rect x="6" y="7" width="2" height="10" rx="1" />
-              <rect x="16" y="7" width="2" height="10" rx="1" />
-            </svg>
-            <h3>Planejador de Treino e Dieta</h3>
-            <p>Ferramenta para uma pessoa acompanhar sua evolução em treinos e dieta, a equipe escolhe um foco, vendo progresso ao longo do tempo.</p>
-            <a class="theme-download" href="desafios/planejador-treino-dieta.pdf" download onclick="event.stopPropagation()">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5" /><path d="M4 19h16" /></svg>
-              Baixar desafio (PDF)
-            </a>
-            <div class="theme-pick"><span class="check"></span><span class="check-label">Selecionar tema</span></div>
-          </div>
-
-          <div class="theme-card" data-theme="Controle de Manutenção de Veículos" tabindex="0" role="button">
-            <svg class="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
-              stroke-linecap="round" stroke-linejoin="round">
-              <path
-                d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94z" />
-            </svg>
-            <h3>Controle de Manutenção de Veículos/Equipamentos</h3>
-            <p>Sistema para lembrar quando veículos precisam de manutenção, baseado em uso e tempo.</p>
-            <a class="theme-download" href="desafios/controle-manutencao-veiculos.pdf" download onclick="event.stopPropagation()">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5" /><path d="M4 19h16" /></svg>
-              Baixar desafio (PDF)
-            </a>
-            <div class="theme-pick"><span class="check"></span><span class="check-label">Selecionar tema</span></div>
-          </div>
+        <div class="theme-card single">
+          <svg class="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7 12h10" />
+            <rect x="3" y="9" width="3" height="6" rx="1" />
+            <rect x="18" y="9" width="3" height="6" rx="1" />
+            <rect x="6" y="7" width="2" height="10" rx="1" />
+            <rect x="16" y="7" width="2" height="10" rx="1" />
+          </svg>
+          <h3>Planejador de Treino e Dieta</h3>
+          <p>Ferramenta para uma pessoa acompanhar sua evolução em treinos e dieta — o time escolhe um foco e mostra o progresso ao longo do tempo.</p>
+          <a class="theme-download" href="arquivos/HACKTOON - TEMA.pdf" download>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5" /><path d="M4 19h16" /></svg>
+            Baixar desafio (PDF)
+          </a>
         </div>
-
-        <div class="theme-summary" id="theme-summary">Nenhum tema selecionado ainda — clique em um card acima para
-          escolher o seu.</div>
       </div>
     </div>
   </section>

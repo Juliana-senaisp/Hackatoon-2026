@@ -191,36 +191,45 @@ nav.links a:hover{ color: var(--ink); }
 
 /* ---------- AVISO IA LIBERADA ---------- */
 .ai-highlight{
-  padding: 0 0 56px;
+  padding: 0 0 64px;
   border-bottom: 1px solid var(--line);
 }
 .ai-note{
   background: var(--card);
-  border: 1px solid var(--teal);
+  border: 1.5px solid var(--teal);
   border-radius: var(--radius-md);
-  padding: 28px 32px;
+  padding: 44px 48px;
+  max-width: 640px;
+  margin: 0 auto;
   display: flex;
-  gap: 20px;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 14px;
+  box-shadow: 0 0 48px -14px rgba(23,195,178,0.45);
+}
+.ai-icon-wrap{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(23,195,178,0.14);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4px;
 }
 .ai-icon{
-  width: 30px; height: 30px;
+  width: 28px; height: 28px;
   color: var(--teal);
-  flex-shrink: 0;
-  margin-top: 2px;
 }
 .ai-note h3{
-  font-size: 1.05rem;
-  margin-bottom: 8px;
+  font-size: 1.35rem;
 }
 .ai-note p{
   color: var(--ink-muted);
-  font-size: 0.94rem;
+  font-size: 1rem;
   margin: 0;
-  max-width: 62ch;
-}
-@media (max-width: 560px){
-  .ai-note{ flex-direction: column; }
+  max-width: 52ch;
 }
 
 /* ---------- SECTION SHELL ---------- */
@@ -229,6 +238,12 @@ section:last-of-type{ border-bottom: none; }
 .section-head{
   max-width: 620px;
   margin-bottom: 48px;
+}
+.section-head.center{
+  max-width: 620px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 .section-head .kicker{
   color: var(--teal);
@@ -243,88 +258,43 @@ section:last-of-type{ border-bottom: none; }
   color: var(--ink-muted);
 }
 
-/* ---------- TEMAS ---------- */
-.theme-grid{
-  display:grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-}
-@media (max-width: 880px){
-  .theme-grid{ grid-template-columns: repeat(2, 1fr); }
-}
-@media (max-width: 560px){
-  .theme-grid{ grid-template-columns: 1fr; }
-}
+/* ---------- TEMA ---------- */
 .theme-card{
   background: var(--card);
   border: 1px solid var(--line);
   border-radius: var(--radius-md);
-  padding: 26px 22px;
-  cursor: pointer;
-  transition: border-color .15s ease, transform .15s ease;
-  text-align:left;
+  padding: 34px 30px;
 }
-.theme-card:hover{ transform: translateY(-2px); }
-.theme-card.selected{
-  border-color: var(--amber);
-  box-shadow: 0 0 0 1px var(--amber) inset;
+.theme-card.single{
+  max-width: 440px;
+  margin: 0 auto;
+  text-align: center;
 }
 .theme-icon{
   width: 34px; height:34px;
   color: var(--teal);
   margin-bottom: 18px;
 }
-.theme-card.selected .theme-icon{ color: var(--amber); }
+.theme-card.single .theme-icon{ margin-left: auto; margin-right: auto; }
 .theme-card h3{
-  font-size: 1.05rem;
-  margin-bottom: 8px;
+  font-size: 1.15rem;
+  margin-bottom: 10px;
 }
 .theme-card p{
   color: var(--ink-muted);
-  font-size: 0.92rem;
+  font-size: 0.94rem;
   margin:0;
-}
-.theme-pick{
-  margin-top: 16px;
-  font-size: 0.82rem;
-  color: var(--ink-muted);
-  display:flex;
-  align-items:center;
-  gap:8px;
-}
-.theme-pick .check{
-  width:16px; height:16px;
-  border-radius:50%;
-  border: 1px solid var(--ink-muted);
-  flex-shrink:0;
-  position:relative;
-}
-.theme-card.selected .theme-pick .check{
-  border-color: var(--amber);
-  background: var(--amber);
-}
-.theme-card.selected .theme-pick .check::after{
-  content:"";
-  position:absolute;
-  left:4px; top:1px;
-  width:4px; height:8px;
-  border: solid #211705;
-  border-width: 0 2px 2px 0;
-  transform: rotate(40deg);
-}
-.theme-card.selected .theme-pick .check-label::after{
-  content: " selecionado";
 }
 
 .theme-download{
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  margin-top: 16px;
-  padding: 8px 12px;
+  margin-top: 22px;
+  padding: 9px 14px;
   border: 1px solid var(--line);
   border-radius: var(--radius-sm);
-  font-size: 0.82rem;
+  font-size: 0.85rem;
   color: var(--teal);
   text-decoration: none;
   transition: border-color .15s ease, background .15s ease;
@@ -335,13 +305,6 @@ section:last-of-type{ border-bottom: none; }
   background: rgba(23,195,178,0.08);
 }
 
-.theme-summary{
-  margin-top: 30px;
-  font-size: 0.92rem;
-  color: var(--ink-muted);
-}
-.theme-summary strong{ color: var(--ink); }
-
 /* ---------- GATE DE ACESSO ---------- */
 .theme-gate{
   background: var(--card);
@@ -349,11 +312,13 @@ section:last-of-type{ border-bottom: none; }
   border-radius: var(--radius-md);
   padding: 40px;
   max-width: 480px;
+  margin: 0 auto;
+  text-align: center;
 }
 .gate-icon{
   width: 34px; height: 34px;
   color: var(--amber);
-  margin-bottom: 18px;
+  margin: 0 auto 18px;
 }
 .theme-gate h3{
   font-size: 1.15rem;
@@ -363,11 +328,12 @@ section:last-of-type{ border-bottom: none; }
 .theme-gate p{
   color: var(--ink-muted);
   font-size: 0.92rem;
-  margin: 0 0 24px;
-  max-width: 40ch;
+  margin: 0 auto 24px;
+  max-width: 36ch;
 }
 .gate-field{
   margin-bottom: 16px;
+  text-align: left;
 }
 .gate-field label{
   display:block;
@@ -395,6 +361,7 @@ section:last-of-type{ border-bottom: none; }
   color: #ff8a7a;
   margin: -6px 0 16px;
   display: none;
+  text-align: left;
 }
 .gate-error.show{ display: block; }
 .gate-submit{
