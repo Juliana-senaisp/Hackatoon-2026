@@ -263,7 +263,6 @@ section:last-of-type{ border-bottom: none; }
   cursor: pointer;
   transition: border-color .15s ease, transform .15s ease;
   text-align:left;
-  color: white;
 }
 .theme-card:hover{ transform: translateY(-2px); }
 .theme-card.selected{
@@ -315,6 +314,25 @@ section:last-of-type{ border-bottom: none; }
 }
 .theme-card.selected .theme-pick .check-label::after{
   content: " selecionado";
+}
+
+.theme-download{
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 16px;
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  font-size: 0.82rem;
+  color: var(--teal);
+  text-decoration: none;
+  transition: border-color .15s ease, background .15s ease;
+}
+.theme-download svg{ width: 15px; height: 15px; flex-shrink: 0; }
+.theme-download:hover{
+  border-color: var(--teal);
+  background: rgba(23,195,178,0.08);
 }
 
 .theme-summary{

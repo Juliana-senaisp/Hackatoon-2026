@@ -80,21 +80,28 @@ gateForm.addEventListener('submit', async (e) => {
 const cards = document.querySelectorAll('.theme-card');
 const resumo = document.getElementById('theme-summary');
 
-cards.forEach(card => {
-  card.addEventListener('click', async () => {
-    cards.forEach(c => c.classList.remove('selected'));
-    card.classList.add('selected');
-    resumo.innerHTML = 'Tema selecionado: <strong>' + card.dataset.theme + '</strong>';
+function selecionarTema(card){
+  cards.forEach(c => c.classList.remove('selected'));
+  card.classList.add('selected');
+  resumo.innerHTML = 'Tema selecionado: <strong>' + card.dataset.theme + '</strong>';
 
-    if (participanteId){
-      try {
-        await db.collection('inscricoes').doc(participanteId).update({
-          tema: card.dataset.theme,
-          atualizadoEm: firebase.firestore.FieldValue.serverTimestamp()
-        });
-      } catch (err) {
-        console.error('Não foi possível salvar o tema escolhido:', err);
-      }
+  if (participanteId){
+    db.collection('inscricoes').doc(participanteId).update({
+      tema: card.dataset.theme,
+      atualizadoEm: firebase.firestore.FieldValue.serverTimestamp()
+    }).catch(err => console.error('Não foi possível salvar o tema escolhido:', err));
+  }
+}
+
+cards.forEach(card => {
+  card.addEventListener('click', () => selecionarTema(card));
+
+  // Acessibilidade: como o card virou um <div>, precisa responder também
+  // ao teclado (Enter / Espaço), já que não é mais um <button> nativo.
+  card.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' '){
+      e.preventDefault();
+      selecionarTema(card);
     }
   });
 });
