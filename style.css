@@ -358,6 +358,7 @@ section:last-of-type{ border-bottom: none; }
 .theme-gate h3{
   font-size: 1.15rem;
   margin-bottom: 8px;
+  color: white;
 }
 .theme-gate p{
   color: var(--ink-muted);
