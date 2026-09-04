@@ -189,6 +189,40 @@ nav.links a:hover{ color: var(--ink); }
   color: var(--ink-muted);
 }
 
+/* ---------- AVISO IA LIBERADA ---------- */
+.ai-highlight{
+  padding: 0 0 56px;
+  border-bottom: 1px solid var(--line);
+}
+.ai-note{
+  background: var(--card);
+  border: 1px solid var(--teal);
+  border-radius: var(--radius-md);
+  padding: 28px 32px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+.ai-icon{
+  width: 30px; height: 30px;
+  color: var(--teal);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.ai-note h3{
+  font-size: 1.05rem;
+  margin-bottom: 8px;
+}
+.ai-note p{
+  color: var(--ink-muted);
+  font-size: 0.94rem;
+  margin: 0;
+  max-width: 62ch;
+}
+@media (max-width: 560px){
+  .ai-note{ flex-direction: column; }
+}
+
 /* ---------- SECTION SHELL ---------- */
 section{ padding: 84px 0; border-bottom: 1px solid var(--line); }
 section:last-of-type{ border-bottom: none; }
@@ -229,6 +263,7 @@ section:last-of-type{ border-bottom: none; }
   cursor: pointer;
   transition: border-color .15s ease, transform .15s ease;
   text-align:left;
+  color: white;
 }
 .theme-card:hover{ transform: translateY(-2px); }
 .theme-card.selected{

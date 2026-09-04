@@ -32,11 +32,11 @@
       <div>
         <div class="hero-date mono">18 de setembro de 2026</div>
         <h1>Um dia inteiro para transformar uma ideia em projeto.</h1>
-        <p class="lede">Formem squads, escolham um tema, e construam uma solução do zero até a apresentação para o júri
-          — tudo em um único dia.</p>
+        <p class="lede">Formem times, escolham um tema, e construam uma solução do zero até a apresentação
+          - tudo em um único dia.</p>
         <div class="hero-actions">
-          <a href="#inscricao" class="btn btn-primary">Garantir minha vaga</a>
-          <a href="#temas" class="btn btn-ghost">Ver os temas</a>
+          <a href="#temas" class="btn btn-primary">Ver os temas</a>
+
         </div>
       </div>
       <div>
@@ -63,12 +63,28 @@
     </div>
   </section>
 
+  <section class="ai-highlight">
+    <div class="wrap">
+      <div class="ai-note">
+        <svg class="ai-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1" />
+          <circle cx="12" cy="12" r="3.2" />
+        </svg>
+        <div>
+          <h3>Uso de IA 100% liberado</h3>
+          <p>Podem usar ferramentas de IA à vontade durante o hackathon — para programar, pesquisar, gerar conteúdo ou resolver qualquer parte do desafio. O que vale é a solução final e o que vocês aprendem construindo ela.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="temas">
     <div class="wrap">
       <div class="section-head">
         <div class="kicker">Temas</div>
         <h2>Escolha a frente que você quer construir</h2>
-        <p>Cada squad escolhe um tema no início do dia. Os temas ficam visíveis apenas com o código de acesso, entregue
+        <p>Cada time escolhe um tema no início do dia. Os temas ficam visíveis apenas com o código de acesso, entregue
           aos alunos inscritos.</p>
       </div>
 
@@ -79,7 +95,7 @@
           <path d="M8 10V7a4 4 0 0 1 8 0v3" />
         </svg>
         <h3>Área restrita</h3>
-        <p>Informe seu nome e o código de acesso entregue na inscrição para ver os temas do hackathon.</p>
+        <p>Informe seu nome e o código de acesso para ver os temas do hackathon.</p>
         <form id="gate-form">
           <div class="gate-field">
             <label for="gate-name">Nome</label>
@@ -87,7 +103,7 @@
           </div>
           <div class="gate-field">
             <label for="gate-code">Código de acesso</label>
-            <input type="text" id="gate-code" placeholder="Ex: HACK2026" required autocomplete="off">
+            <input type="text" id="gate-code" placeholder="Ex: SENAI" required autocomplete="off">
           </div>
           <div class="gate-error" id="gate-error">Código inválido. Confira com a organização e tente novamente.</div>
           <button type="submit" class="btn btn-primary gate-submit">Desbloquear temas</button>
@@ -180,25 +196,24 @@
       <div class="section-head">
         <div class="kicker">Cronograma</div>
         <h2>Como vai ser o dia 18/09</h2>
-        <p>Um roteiro sugerido do dia inteiro. Ajuste os horários e atividades conforme a realidade da sua turma e do
-          espaço usado.</p>
+
       </div>
 
       <div class="timeline mono">
         <div class="t-item">
           <div class="t-time">08:00</div>
           <div class="t-title">Credenciamento</div>
-          <div class="t-desc">Chegada, check-in dos participantes e formação final dos squads.</div>
+          <div class="t-desc">Chegada, verificação dos participantes</div>
+        </div>
+        <div class="t-item">
+          <div class="t-time">08:15</div>
+          <div class="t-title">Abertura</div>
+          <div class="t-desc">Boas-vindas, apresentação das regras, liberação dos temas e formação dos times</div>
         </div>
         <div class="t-item">
           <div class="t-time">08:30</div>
-          <div class="t-title">Abertura</div>
-          <div class="t-desc">Boas-vindas, apresentação das regras e liberação oficial dos temas.</div>
-        </div>
-        <div class="t-item">
-          <div class="t-time">09:00</div>
           <div class="t-title">Início do desenvolvimento</div>
-          <div class="t-desc">Cada squad começa a construir sua solução com apoio de mentores.</div>
+          <div class="t-desc">Cada time começa a construir sua solução</div>
         </div>
         <div class="t-item">
           <div class="t-time">12:00</div>
@@ -207,28 +222,23 @@
         </div>
         <div class="t-item">
           <div class="t-time">13:00</div>
-          <div class="t-title">Retomada + mentorias</div>
-          <div class="t-desc">Continuação do desenvolvimento, com rodadas de mentoria por squad.</div>
+          <div class="t-title">Retomada</div>
+          <div class="t-desc">Continuação do desenvolvimento</div>
         </div>
         <div class="t-item">
-          <div class="t-time">16:30</div>
+          <div class="t-time">15:30</div>
           <div class="t-title">Encerramento do desenvolvimento</div>
-          <div class="t-desc">Squads finalizam o projeto e preparam a apresentação.</div>
+          <div class="t-desc">Times finalizam o projeto e enviam para avaliação.</div>
+        </div>
+        <div class="t-item">
+          <div class="t-time">15:40</div>
+          <div class="t-title">Apresentações</div>
+          <div class="t-desc">Cada time apresenta seu projeto.</div>
         </div>
         <div class="t-item">
           <div class="t-time">17:00</div>
-          <div class="t-title">Pitches</div>
-          <div class="t-desc">Cada squad apresenta seu projeto ao júri.</div>
-        </div>
-        <div class="t-item">
-          <div class="t-time">18:00</div>
-          <div class="t-title">Avaliação do júri</div>
-          <div class="t-desc">Deliberação com base nos critérios definidos previamente.</div>
-        </div>
-        <div class="t-item">
-          <div class="t-time">18:30</div>
-          <div class="t-title">Premiação e encerramento</div>
-          <div class="t-desc">Anúncio dos vencedores e fechamento do evento.</div>
+          <div class="t-title">Encerramento</div>
+          <div class="t-desc">Encerramento do evento. <br> Os vencedores serão anunciados na próxima aula 24/09/2026</div>
         </div>
       </div>
     </div>
