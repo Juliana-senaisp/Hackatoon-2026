@@ -1,5 +1,5 @@
 // Contagem regressiva até o início do hackathon
-const alvo = new Date('2026-09-18T08:00:00');
+const alvo = new Date('2026-10-02T08:00:00');
 
 function atualizarContagem(){
   const agora = new Date();
