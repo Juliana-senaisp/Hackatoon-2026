@@ -6,7 +6,7 @@
   --ink-muted: #948fae;
   --amber: #ffb627;
   --amber-dim: #7a5e1c;
-  --teal: #17c3b2;
+  --teal: #118d81;
   --line: rgba(244,241,234,0.12);
   --radius-sm: 6px;
   --radius-md: 14px;
@@ -128,7 +128,7 @@ nav.links a:hover{ color: var(--ink); }
 }
 .hero-date{
   color: var(--teal);
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   margin-bottom: 18px;
 }
 .hero h1{
@@ -247,7 +247,7 @@ section:last-of-type{ border-bottom: none; }
 }
 .section-head .kicker{
   color: var(--teal);
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   margin-bottom: 10px;
 }
 .section-head h2{
